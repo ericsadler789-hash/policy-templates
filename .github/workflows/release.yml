@@ -12,8 +12,25 @@ jobs:
       contents: write
 
     steps:
+      # Check out master rather than the tagged commit. The tag supplies only the
+      # version number; the release is built from master's tip. This makes the
+      # workflow tolerant of a tag pushed before a pull, which would otherwise
+      # leave the bump commit unable to fast-forward into master. The tag is
+      # re-pointed at the resulting commit further down, so tag and release still
+      # agree. Building from master also means docs/oma-uris.md is regenerated
+      # from a tree containing everything merged, not just what the tag saw.
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Note if the tag was behind master
+        run: |
+          TAGGED="$(git rev-parse "$GITHUB_REF_NAME^{commit}")"
+          if [ "$TAGGED" != "$(git rev-parse HEAD)" ]; then
+            echo "::warning::Tag $GITHUB_REF_NAME points at $TAGGED but master is at $(git rev-parse HEAD). Releasing master; the tag will be moved to match."
+          fi
 
       - name: Install xmlstarlet
         run: sudo apt-get install -y xmlstarlet
@@ -42,8 +59,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add windows/firefox.admx windows/de-DE/firefox.adml windows/en-US/firefox.adml windows/ru-RU/firefox.adml windows/fr-FR/firefox.adml docs/oma-uris.md
-          git diff --staged --quiet || git commit -m "Bump version to ${{ steps.version.outputs.version }}"
-          git push origin HEAD:master
+          if git diff --staged --quiet; then
+            echo "Revision numbers already current; nothing to commit."
+          else
+            git commit -m "Bump version to ${{ steps.version.outputs.version }}"
+            git push origin HEAD:master
+          fi
 
       # The tag triggers this workflow, so the bump commit is necessarily a child
       # of the tagged commit - meaning the tag's own tree would still carry the
