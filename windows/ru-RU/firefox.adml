@@ -92,6 +92,7 @@
       <string id="SUPPORTED_FF153_ONLY">Firefox 153 или более поздние версии</string>
       <string id="SUPPORTED_FF154_ONLY">Firefox 154 или более поздние версии</string>
       <string id="SUPPORTED_FF154">Firefox 154 или более поздние версии, Firefox 153 ESR или более поздние версии</string>
+      <string id="SUPPORTED_FF155_ONLY">Firefox 155 или более поздние версии</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Разрешения</string>
       <string id="Camera_group">Камера</string>
@@ -294,6 +295,10 @@
       <string id="DisableFormHistory_Explain">Если эта политика включена, Firefox не запомнит историю форм или поиска.
 
 Если эта политика отключена или не настроена, Firefox запомнит историю форм и поиска.</string>
+      <string id="DisableLaunchOnLogin">Отключить запуск при входе в систему</string>
+      <string id="DisableLaunchOnLogin_Explain">Если эта политика включена, Firefox не запускается автоматически при входе пользователя в систему. Существующая запись о запуске при входе удаляется, а флажок «Открывать Firefox автоматически при запуске компьютера» в разделе «Настройки > Основные > При запуске» скрывается.
+
+Если эта политика отключена или не настроена, пользователь сам определяет, запускается ли Firefox при входе в систему.</string>
       <string id="DisablePasswordReveal">Запретить показывать пароли в сохраненных логинах</string>
       <string id="DisablePasswordReveal_Explain">Если эта политика включена, пользователи не могут отображать пароли в сохраненных логинах.
 
