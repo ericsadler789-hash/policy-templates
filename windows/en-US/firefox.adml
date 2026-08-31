@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" revision="8.1" schemaVersion="1.0">
+<policyDefinitionResources xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" revision="8.2" schemaVersion="1.0">
   <displayName/>
   <description/>
   <resources>
@@ -295,7 +295,7 @@ If this policy is disabled or not configured, the "Forget" button is available.<
 
 If this policy is disabled or not configured, Firefox will remember form and search history.</string>
       <string id="DisableLaunchOnLogin">Disable launch on login</string>
-      <string id="DisableLaunchOnLogin_Explain">If this policy is enabled, Firefox does not launch automatically when the user logs in. Any existing launch-on-login entry is removed and the "Open Firefox automatically when your computer starts up" checkbox in Settings > General > Startup is hidden.
+      <string id="DisableLaunchOnLogin_Explain">If this policy is enabled, Firefox does not launch automatically when the user logs in. Any existing launch-on-login entry is removed and the "Open Firefox automatically when your computer starts up" checkbox in Settings &gt; General &gt; Startup is hidden.
 
 If this policy is disabled or not configured, the user controls whether Firefox launches on login.</string>
       <string id="DisablePasswordReveal">Do not allow passwords to be revealed in saved logins</string>

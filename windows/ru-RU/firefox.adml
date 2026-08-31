@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" revision="8.1" schemaVersion="1.0">
+<policyDefinitionResources xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" revision="8.2" schemaVersion="1.0">
   <displayName/>
   <description/>
   <resources>
@@ -296,7 +296,7 @@
 
 Если эта политика отключена или не настроена, Firefox запомнит историю форм и поиска.</string>
       <string id="DisableLaunchOnLogin">Отключить запуск при входе в систему</string>
-      <string id="DisableLaunchOnLogin_Explain">Если эта политика включена, Firefox не запускается автоматически при входе пользователя в систему. Существующая запись о запуске при входе удаляется, а флажок «Открывать Firefox автоматически при запуске компьютера» в разделе «Настройки > Основные > При запуске» скрывается.
+      <string id="DisableLaunchOnLogin_Explain">Если эта политика включена, Firefox не запускается автоматически при входе пользователя в систему. Существующая запись о запуске при входе удаляется, а флажок «Открывать Firefox автоматически при запуске компьютера» в разделе «Настройки &gt; Основные &gt; При запуске» скрывается.
 
 Если эта политика отключена или не настроена, пользователь сам определяет, запускается ли Firefox при входе в систему.</string>
       <string id="DisablePasswordReveal">Запретить показывать пароли в сохраненных логинах</string>

@@ -1,6 +1,6 @@
 # Firefox ADMX OMA-URIs for Intune
 
-Auto-generated from `windows/firefox.admx` (revision `8.1`). Do not edit by hand.
+Auto-generated from `windows/firefox.admx` (revision `8.2`). Do not edit by hand.
 
 Entries are grouped by top-level policy so a link to `docs/oma-uris.md#policyname` (lowercased) reaches the right section. Policies marked "(Deprecated)" in the ADML are omitted. Numbered families (e.g. `Bookmark01`-`Bookmark50`) are collapsed into a single entry with an `NN` placeholder in the URI.
 
@@ -1660,6 +1660,22 @@ Replace `NN` with the numeric suffix from `Bookmark01` through `Bookmark50` (50 
 
 ```
 ./Device/Vendor/MSFT/Policy/Config/Firefox~Policy~firefox/DisableFormHistory
+```
+
+**Value:**
+
+```
+<enabled/> or <disabled/>
+```
+
+## DisableLaunchOnLogin
+
+[Full policy documentation](https://firefox-admin-docs.mozilla.org/reference/policies/disablelaunchonlogin/)
+
+**OMA-URI:**
+
+```
+./Device/Vendor/MSFT/Policy/Config/Firefox~Policy~firefox/DisableLaunchOnLogin
 ```
 
 **Value:**
